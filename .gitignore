@@ -30,3 +30,8 @@ wobj
 *.exe
 *.out
 *.app
+
+#Visual Studio stuff
+Debug
+*.suo
+*.sdf
