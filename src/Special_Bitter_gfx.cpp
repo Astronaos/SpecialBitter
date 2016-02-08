@@ -218,6 +218,7 @@ void SPECIAL_BITTER_MAIN::gfx_init(void) // initialization routine; rendering co
 }
 void SPECIAL_BITTER_MAIN::gfx_reshape(const PAIR<unsigned int> & i_tNew_Size) // window size change
 {
+	// set basic projection
 	PAIR<unsigned int> m_tViewport_Size = i_tNew_Size;
 	glViewport(0,0,(GLsizei) m_tViewport_Size.m_tX, (GLsizei) m_tViewport_Size.m_tY);
 	glMatrixMode(GL_PROJECTION);
@@ -225,13 +226,13 @@ void SPECIAL_BITTER_MAIN::gfx_reshape(const PAIR<unsigned int> & i_tNew_Size) //
 	glOrtho(0.0,m_tViewport_Size.m_tX / m_tViewport_Size.m_tY,0.0,1.0,0.0,1.0);
 	glMatrixMode(GL_MODELVIEW);
 
+	// make the main pane to be the full window
 	PAIR<unsigned int> tWindow_BL(0,0);
 	PAIR<unsigned int> tWindow_TR((unsigned int)m_tViewport_Size.m_tX,(unsigned int)(m_tViewport_Size.m_tY));
-	PAIR<unsigned int> tError_BL = tWindow_TR * 0.25;
-	PAIR<unsigned int> tError_TR = tWindow_TR * 0.75;
 
 	Move_Pane(m_idPane,QUAD<unsigned int> (tWindow_BL,tWindow_TR));
 
+	// define buttons within the pane
 	m_mMain_Pane_Buttons[BLUE_CIRCLE_SELECT] = BUTTON_INFO(BUTTON_INFO::RECTANGLE, PAIR<double>(1.0,0.8), PAIR<double>(0.1,0.05), BLUE_CIRCLE_SELECT);
 }
 void SPECIAL_BITTER_MAIN::gfx_close(void) // graphics exiting; rendering context still active
@@ -255,6 +256,7 @@ void SPECIAL_BITTER_MAIN::gfx_display(pane_id i_idPane) // primary display routi
 //			glVertex2d(0.0,0.0);
 //		glEnd();
 
+		// draw a blue circle with radius (0.01), set at x = sin(t), y = cos(t)
 		glColor4d(0.0,0.0,1.0,1.0);
 		glPushMatrix();
 			glTranslated(0.5,0.5,0.0);
@@ -266,6 +268,7 @@ void SPECIAL_BITTER_MAIN::gfx_display(pane_id i_idPane) // primary display routi
 				glVertexList(g_vEllipse);
 			glEnd();	
 		glPopMatrix();
+		// loop through list of buttons, drawing each one
 		for (std::map<button_id,BUTTON_INFO>::const_iterator cI = m_mMain_Pane_Buttons.begin(); cI != m_mMain_Pane_Buttons.end(); cI++)
 		{
 			PAIR<double> pdPosition = cI->second.GetPosition();
@@ -299,6 +302,7 @@ void SPECIAL_BITTER_MAIN::gfx_display(pane_id i_idPane) // primary display routi
 				}
 			glPopMatrix();
 		}
+		// if the user is in the process of placing a blue circle, draw it at the current mouse position
 		if (m_idSelected_Button == BLUE_CIRCLE_SELECT)
 		{
 			glColor4d(0.0,0.0,1.0,1.0);
@@ -311,6 +315,7 @@ void SPECIAL_BITTER_MAIN::gfx_display(pane_id i_idPane) // primary display routi
 				glEnd();	
 			glPopMatrix();
 		}
+		// iterate through the list of placed objects, draw each one
 		for (std::vector<OBJECT>::const_iterator cI = m_vPlaced_Objects.begin(); cI != m_vPlaced_Objects.end(); cI++)
 		{
 			switch (cI->m_eObject_Type)

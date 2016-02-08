@@ -35,6 +35,7 @@ private:
 
 	double		m_dTimer;
 	bool		m_bFlasher_1s_50p;
+	criticalsection	m_csEvent_Queue;
 	std::deque<button_id> m_qEvent_List;
 
 public:
