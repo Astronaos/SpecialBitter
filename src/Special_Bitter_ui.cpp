@@ -6,11 +6,18 @@ void SPECIAL_BITTER_MAIN::on_key_down(KEYID eKey_ID, unsigned char chScan_Code, 
 	switch (eKey_ID)
 	{
 	case KEY_ESCAPE:
-	case KEY_Q: // if Esc or Q pressed, add an event to request exit
 		m_csEvent_Queue.Set();
 		m_qEvent_List.push_back(QUIT_REQUEST);
 		m_csEvent_Queue.Unset();
 		break;
+    case KEY_PGDN:
+        m_ihmMap.Shift_Zoom(1.1);
+        Request_Refresh();
+        break;
+    case KEY_PGUP:
+        m_ihmMap.Shift_Zoom(1.0/1.1);
+        Request_Refresh();
+        break;
 	}
 }
 
@@ -106,6 +113,24 @@ void SPECIAL_BITTER_MAIN::on_timer(unsigned int i_uiTimer_ID, const double & i_d
 		}
 	}
 	m_csEvent_Queue.Unset();
+
+	if (Get_Key_State(KEY_A))
+		m_ihmMap.Shift_Map(PAIR<double>(-1.0 * i_dDelta_Time_s,0.0));
+	if (Get_Key_State(KEY_D))
+		m_ihmMap.Shift_Map(PAIR<double>(1.0 * i_dDelta_Time_s,0.0));
+	if (Get_Key_State(KEY_W))
+		m_ihmMap.Shift_Map(PAIR<double>(0.0,1.0 * i_dDelta_Time_s));
+	if (Get_Key_State(KEY_S))
+		m_ihmMap.Shift_Map(PAIR<double>(0.0,-1.0 * i_dDelta_Time_s));
+	if (Get_Key_State(KEY_Q)) // rotate camera
+		m_ihmMap.Change_Isometric_Angle(i_dDelta_Time_s * 90.0);
+	if (Get_Key_State(KEY_E)) // rotate camera
+		m_ihmMap.Change_Isometric_Angle(i_dDelta_Time_s * -90.0);
+	if (Get_Key_State(KEY_LEFT)) // rotate camera
+		m_ihmMap.Change_Camera_Angle(i_dDelta_Time_s * 180.0);
+	if (Get_Key_State(KEY_RIGHT)) // rotate camera
+		m_ihmMap.Change_Camera_Angle(i_dDelta_Time_s * -180.0);
+
 	// increment the timer
 	m_dTimer += i_dDelta_Time_s;
 	// set 1 Hz, 50% duty flasher

@@ -22,6 +22,13 @@ public:
 	}
 };
 
+class	SPACE : public MAPSPACE
+{
+public:
+
+	void	Draw_Layer(unsigned int i_uiLayer,void *) const;
+};
+
 class SPECIAL_BITTER_MAIN : public MAIN
 {
 private:
@@ -37,6 +44,8 @@ private:
 	bool		m_bFlasher_1s_50p;
 	criticalsection	m_csEvent_Queue;
 	std::deque<button_id> m_qEvent_List;
+
+	ISOMETRIC_HEXMAP<SPACE>	m_ihmMap;
 
 public:
 	SPECIAL_BITTER_MAIN(void) {;}

@@ -223,7 +223,8 @@ void SPECIAL_BITTER_MAIN::gfx_reshape(const PAIR<unsigned int> & i_tNew_Size) //
 	glViewport(0,0,(GLsizei) m_tViewport_Size.m_tX, (GLsizei) m_tViewport_Size.m_tY);
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	glOrtho(0.0,m_tViewport_Size.m_tX / m_tViewport_Size.m_tY,0.0,1.0,0.0,1.0);
+//	glOrtho(0.0,m_tViewport_Size.m_tX / m_tViewport_Size.m_tY,0.0,1.0,0.0,1.0);
+	glFrustum(0.0,m_tViewport_Size.m_tX / m_tViewport_Size.m_tY,0.0,1.0,0.0,1.0);
 	glMatrixMode(GL_MODELVIEW);
 
 	// make the main pane to be the full window
@@ -247,6 +248,12 @@ void SPECIAL_BITTER_MAIN::gfx_display(pane_id i_idPane) // primary display routi
 	}
 	if (i_idPane == m_idPane)
 	{
+		m_ihmMap.Draw_Map(NULL);
+		glColor4d(0.0,0.0,0.0,1.0);
+		glLineWidth(2.25);
+		//@@TODO: figure out why depth testing is doing funny things.  depth testing will help with making sure grid lines are underneath units
+		glTranslated(0.0,0.0,0.0025); // draw grid slightly above map but below units
+		m_ihmMap.Draw_Grid();
 		double dSize = Get_Pane_Aspect_Ratio(m_idPane);
 //		glColor4d(0.5,0.5,0.5,1.0);
 //		glBegin(GL_QUADS);
@@ -336,4 +343,6 @@ void SPECIAL_BITTER_MAIN::gfx_display(pane_id i_idPane) // primary display routi
 		
 	}
 }
-
+void SPACE::Draw_Layer(unsigned int i_uiLayer, void * io_lpvData) const
+{
+}
