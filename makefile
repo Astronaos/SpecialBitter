@@ -29,7 +29,7 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.cpp $(INCLUDES)
 
 linux: $(OBJS) $(BINDIR)/$(EXENAME)
 
-$(BINDIR)/$(EXENAME):  $(OBJS)
+$(BINDIR)/$(EXENAME):  $(OBJS) ../EngineMk1/lib/libEngineMk1.a
 	$(CC) $(LFLAGS) -I$(INCDIR)  $(OBJS) $(LIBS) -o $(BINDIR)/$(EXENAME)
 
 

@@ -15,9 +15,7 @@ void SPECIAL_BITTER_MAIN::init(void) // initialization routine; rendering contex
 	m_ihmMap.Set_Map_Zoom(2.0);
 	for (unsigned int uiI = 0; uiI < 9; uiI++)
 		m_ihmMap.Shift_Zoom(1.0/1.1);
-	printf("init\n");
-	Set_Draw_Mode(PROJECTION);
-	printf("pro\n");
+//	Set_Draw_Mode(PROJECTION);
 }
 void SPECIAL_BITTER_MAIN::close(void) // program exiting; rendering context destroyed
 {

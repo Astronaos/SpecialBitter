@@ -122,9 +122,9 @@ void SPECIAL_BITTER_MAIN::on_timer(unsigned int i_uiTimer_ID, const double & i_d
 		m_ihmMap.Shift_Map(PAIR<double>(0.0,1.0 * i_dDelta_Time_s));
 	if (Get_Key_State(KEY_S))
 		m_ihmMap.Shift_Map(PAIR<double>(0.0,-1.0 * i_dDelta_Time_s));
-	if (Get_Key_State(KEY_Q)) // rotate camera
+	if (Get_Key_State(KEY_UP)) // rotate camera
 		m_ihmMap.Change_Isometric_Angle(i_dDelta_Time_s * 90.0);
-	if (Get_Key_State(KEY_E)) // rotate camera
+	if (Get_Key_State(KEY_DOWN)) // rotate camera
 		m_ihmMap.Change_Isometric_Angle(i_dDelta_Time_s * -90.0);
 	if (Get_Key_State(KEY_LEFT)) // rotate camera
 		m_ihmMap.Change_Camera_Angle(i_dDelta_Time_s * 180.0);
