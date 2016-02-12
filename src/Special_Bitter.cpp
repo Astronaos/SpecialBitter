@@ -13,8 +13,10 @@ void SPECIAL_BITTER_MAIN::init(void) // initialization routine; rendering contex
 
 	m_ihmMap.Set_Map_Size(PAIR<unsigned int>(128,128),3);
 	m_ihmMap.Set_Map_Zoom(2.0);
-	for (unsigned int uiI = 0; uiI < 9; uiI++)
+	for (unsigned int uiI = 0; uiI < 16; uiI++)
 		m_ihmMap.Shift_Zoom(1.0/1.1);
+	m_ihmMap.Center_Map(PAIR<int>(64,64));
+
 //	Set_Draw_Mode(PROJECTION);
 }
 void SPECIAL_BITTER_MAIN::close(void) // program exiting; rendering context destroyed

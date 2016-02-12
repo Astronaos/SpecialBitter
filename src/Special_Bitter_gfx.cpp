@@ -13,16 +13,11 @@ void SPECIAL_BITTER_MAIN::gfx_init(void) // initialization routine; rendering co
 
 	SelectFontFace(SANS,true,false);
 }
+
 void SPECIAL_BITTER_MAIN::gfx_reshape(const PAIR<unsigned int> & i_tNew_Size) // window size change
 {
 	// set basic projection
 	PAIR<unsigned int> m_tViewport_Size = i_tNew_Size;
-	glViewport(0,0,(GLsizei) m_tViewport_Size.m_tX, (GLsizei) m_tViewport_Size.m_tY);
-	glMatrixMode(GL_PROJECTION);
-	glLoadIdentity();
-//	glOrtho(0.0,m_tViewport_Size.m_tX / m_tViewport_Size.m_tY,0.0,1.0,0.0,1.0);
-	glFrustum(0.0,m_tViewport_Size.m_tX / m_tViewport_Size.m_tY,0.0,1.0,0.0,1.0);
-	glMatrixMode(GL_MODELVIEW);
 
 	// make the main pane to be the full window
 	PAIR<unsigned int> tWindow_BL(0,0);
@@ -45,122 +40,21 @@ void SPECIAL_BITTER_MAIN::gfx_display(pane_id i_idPane) // primary display routi
 		// replace the 
 		glMatrixMode(GL_PROJECTION);
 		glLoadIdentity();
-		glFrustum(-dSize * 0.5,dSize * 0.5,-0.5,0.5,0.001,0.20);
-//		glOrtho(-dSize,dSize,-0.5,0.5,1.5,20.0);
+//		glFrustum(-dSize * 0.5,dSize * 0.5,-0.5,0.5,0.001,0.50);
+		glOrtho(-dSize*0.5,dSize*0.5,-0.5,0.5,0.000,128.0);
 		glMatrixMode(GL_MODELVIEW);
 		glLoadIdentity();
 		glEnable(GL_DEPTH_TEST);
-		glTranslated(0.0,0.0,-0.05);
-		//m_ihmMap.Draw_Map(NULL);
-//		glColor4d(0.0,0.0,0.0,1.0);
 		glLineWidth(2.25);
 		//@@TODO: figure out why depth testing is doing funny things.  depth testing will help with making sure grid lines are underneath units
-//		glTranslated(0.0,0.0,0.0025); // draw grid slightly above map but below units
-		m_ihmMap.Draw_Grid();
-//		glTranslated(dSize*0.5,0.5,0.0);
-//		glScaled(1.0,1.0,-1.0);
-		glRotated(m_ihmMap.Get_Isometric_Camera_Angle(),1.0,0.0,0.0);
-		glRotated(m_ihmMap.Get_Camera_Rotation_Angle(),0.0,0.0,1.0);
-		glColor4d(1.0,0.0,0.0,1.0);
-		glBegin(GL_LINES);
-			glVertex3d(0.0,0.0,0.0);
-			glVertex3d(1.0,0.0,0.0);
-		glEnd();
-		glColor4d(0.0,1.0,0.0,1.0);
-		glBegin(GL_LINES);
-			glVertex3d(0.0,0.0,0.0);
-			glVertex3d(0.0,1.0,0.0);
-		glEnd();
-		glColor4d(0.0,0.0,1.0,1.0);
-		glBegin(GL_LINES);
-			glVertex3d(0.0,0.0,0.0);
-			glVertex3d(0.0,0.0,1.0);
-		glEnd();
-
-/*		glColor4d(1.0,0.00,0.0,1.0);
-		glBegin(GL_TRIANGLES);
-			// top
-			glVertex3d( 0.05,-0.05,0.00);
-			glVertex3d(-0.05,-0.05,0.00);
-			glVertex3d( 0.05, 0.05,0.00);
-//			glVertex3d(-0.05, 0.05,0.05);
-
-		glEnd();*/
-		glColor4d(0.0,1.00,0.0,1.0);
-		glBegin(GL_QUADS);
-			// top
-			glVertex3d(-0.05,-0.05,0.00);
-			glVertex3d(-0.05,0.05,0.00);
-			glVertex3d(-0.05,0.05,0.05);
-			glVertex3d(-0.05,-0.05,0.05);
-		glEnd();
-		glColor4d(0.0,0.00,1.0,1.0);
-		glBegin(GL_QUADS);
-			// top
-			glVertex3d( 0.05,-0.05,0.00);
-			glVertex3d( 0.05,0.05,0.00);
-			glVertex3d( 0.05,0.05,0.05);
-			glVertex3d( 0.05,-0.05,0.05);
-		glEnd();
-		glColor4d(1.0,1.00,0.0,1.0);
-		glBegin(GL_QUADS);
-			// top
-			glVertex3d(-0.05,-0.05,0.00);
-			glVertex3d( 0.05,-0.05,0.00);
-			glVertex3d( 0.05,-0.05,0.05);
-			glVertex3d(-0.05,-0.05,0.05);
-		glEnd();
-		glColor4d(0.0,1.00,1.0,1.0);
-		glBegin(GL_QUADS);
-			// top
-			glVertex3d(-0.05, 0.05,0.00);
-			glVertex3d( 0.05, 0.05,0.00);
-			glVertex3d( 0.05, 0.05,0.05);
-			glVertex3d(-0.05, 0.05,0.05);
-		glEnd();
+		glPushMatrix();
+		glTranslated(0.0,0.0,-64.0);
 		glColor4d(0.0,0.0,0.0,1.0);
-		glBegin(GL_LINES);
-			glVertex3d(-0.05, 0.05,0.00);
-			glVertex3d(-0.05, 0.05,0.05);
-			glVertex3d( 0.05, 0.05,0.00);
-			glVertex3d( 0.05, 0.05,0.05);
-			glVertex3d(-0.05,-0.05,0.00);
-			glVertex3d(-0.05,-0.05,0.05);
-			glVertex3d( 0.05,-0.05,0.00);
-			glVertex3d( 0.05,-0.05,0.05);
-		glEnd();
-// second
-/*		glColor4d(1.0,0.0,1.0,1.0);
-		glBegin(GL_QUADS);
-			// top
-			glVertex3d(-0.025,-0.025,0.10);
-			glVertex3d(-0.025,0.025,0.10);
-			glVertex3d(0.025,0.025,0.10);
-			glVertex3d(0.025,-0.025,0.10);
-			// top
-			glVertex3d(-0.025,-0.025,0.05);
-			glVertex3d(-0.025,0.025,0.05);
-			glVertex3d(-0.025,0.025,0.10);
-			glVertex3d(-0.025,-0.025,0.10);
-			// top
-			glVertex3d( 0.025,-0.025,0.05);
-			glVertex3d( 0.025,0.025,0.05);
-			glVertex3d( 0.025,0.025,0.10);
-			glVertex3d( 0.025,-0.025,0.10);
-			// top
-			glVertex3d(-0.025,-0.025,0.05);
-			glVertex3d( 0.025,-0.025,0.05);
-			glVertex3d( 0.025,-0.025,0.10);
-			glVertex3d(-0.025,-0.025,0.10);
-			// top
-			glVertex3d(-0.025, 0.025,0.05);
-			glVertex3d( 0.025, 0.025,0.05);
-			glVertex3d( 0.025, 0.025,0.10);
-			glVertex3d(-0.025, 0.025,0.10);
+//		m_ihmMap.Draw_Map(NULL);
+		m_ihmMap.Draw_Grid();
+		glPopMatrix();
 
-
-		glEnd();
-*/		glDisable(GL_DEPTH_TEST);
+		glDisable(GL_DEPTH_TEST);
 
 		glMatrixMode(GL_PROJECTION);
 		glLoadIdentity();
@@ -174,17 +68,26 @@ void SPECIAL_BITTER_MAIN::gfx_display(pane_id i_idPane) // primary display routi
 //			glVertex2d(dSize,0.0);
 //			glVertex2d(0.0,0.0);
 //		glEnd();
+		std::ostringstream sAngle;
+		sAngle << sin(m_dTimer);
+		glColor4d(0.0,0.0,0.0,1.0); // black
+		glPrint(0.05,0.0,0.0,0.0,sAngle.str().c_str());
+
+		std::ostringstream sIsoAngle;
+		sIsoAngle << m_ihmMap.Get_Isometric_Camera_Angle();
+		glColor4d(0.0,0.0,0.0,1.0); // black
+		glPrint(0.05,0.5*dSize,0.0,0.0,sIsoAngle.str().c_str());
 
 		// draw a blue circle with radius (0.01), set at x = sin(t), y = cos(t)
-		glColor4d(0.0,0.0,1.0,1.0);
+		glColor4d(0.0,0.0,1.0,1.0); // blue
 		glPushMatrix();
-			glTranslated(0.5,0.5,0.0);
-			glScaled(0.5,0.5,0.5);
-			glTranslated(sin(m_dTimer),cos(m_dTimer),0.0);
-			glScaled(0.01,0.01,0.01);
+			glTranslated(0.5,0.5,0.0); // move approximately to middle of window - i.e. center orbit at this point
+			glScaled(0.5,0.5,0.5); // scale the orbit to +/- 0.5 (should touch top, bottom, and left edge of window)
+			glTranslated(sin(m_dTimer),cos(m_dTimer),0.0); // move to point on orbit to draw the circle
+			glScaled(0.01,0.01,0.01); // make the circle size 0.01
 			glBegin(GL_TRIANGLE_FAN);
-				glVertex3d(0,0,0);
-				glVertexList(g_vEllipse);
+				glVertex3d(0,0,0); // center of circle
+				glVertexList(g_vEllipse); // iterate through vertices on edge of circle
 			glEnd();	
 		glPopMatrix();
 		// loop through list of buttons, drawing each one
@@ -194,25 +97,25 @@ void SPECIAL_BITTER_MAIN::gfx_display(pane_id i_idPane) // primary display routi
 			PAIR<double> pdSize = cI->second.GetSize();
 
 			glPushMatrix();
-				glTranslated(pdPosition.m_tX,pdPosition.m_tY,0.0);
-				glScaled(pdSize.m_tX,pdSize.m_tY,1.0);
+				glTranslated(pdPosition.m_tX,pdPosition.m_tY,0.0); // move to top left of button
+				glScaled(pdSize.m_tX,pdSize.m_tY,1.0); // scale such that coordinates of button are (0,0)-(1,-1)
 				int iStatus = cI->second.GetStatus();
 				switch (cI->second.GetID())
 				{
 				case BLUE_CIRCLE_SELECT:
-					glColor4d(0,0,0,1.0);
-					glBegin(GL_LINE_STRIP);
+					glColor4d(0,0,0,1.0); // black
+					glBegin(GL_LINE_STRIP); // draw the outline of a rectangle
 						glVertex3d(0.0,0.0,0.0);
 						glVertex3d(0.0,-1.0,0.0);
 						glVertex3d(1.0,-1.0,0.0);
 						glVertex3d(1.0,0.0,0.0);
 						glVertex3d(0.0,0.0,0.0);
 					glEnd();
-					glColor4d(0.0,0.0,1.0,1.0);
-					glPushMatrix();
-						glTranslated(0.5,-0.5,0.0);
-						glScaled(0.5,0.5,0.5);
-						glBegin(GL_TRIANGLE_FAN);
+					glColor4d(0.0,0.0,1.0,1.0); // blue
+					glPushMatrix(); 
+						glTranslated(0.5,-0.5,0.0); // move to middle of button
+						glScaled(0.5,0.5,0.5); // make the circle the size of the button (r = 0.5)
+						glBegin(GL_TRIANGLE_FAN); // draw circle
 							glVertex3d(0,0,0);
 							glVertexList(g_vEllipse);
 						glEnd();	
@@ -224,11 +127,11 @@ void SPECIAL_BITTER_MAIN::gfx_display(pane_id i_idPane) // primary display routi
 		// if the user is in the process of placing a blue circle, draw it at the current mouse position
 		if (m_idSelected_Button == BLUE_CIRCLE_SELECT)
 		{
-			glColor4d(0.0,0.0,1.0,1.0);
+			glColor4d(0.0,0.0,1.0,1.0); // blue
 			glPushMatrix();
-				glTranslated(m_pdMouse_Position.m_tX,m_pdMouse_Position.m_tY,0.0);
-				glScaled(0.02,0.02,0.02);
-				glBegin(GL_TRIANGLE_FAN);
+				glTranslated(m_pdMouse_Position.m_tX,m_pdMouse_Position.m_tY,0.0); // position of mouse pointer in window
+				glScaled(0.02,0.02,0.02); // set circle radius = 0.02 (* height of window)
+				glBegin(GL_TRIANGLE_FAN); // draw circle
 					glVertex3d(0,0,0);
 					glVertexList(g_vEllipse);
 				glEnd();	
@@ -240,11 +143,11 @@ void SPECIAL_BITTER_MAIN::gfx_display(pane_id i_idPane) // primary display routi
 			switch (cI->m_eObject_Type)
 			{
 			case OBJECT::BLUE_CIRCLE:
-				glColor4d(0.0,0.0,1.0,1.0);
+				glColor4d(0.0,0.0,1.0,1.0); // blue
 				glPushMatrix();
-					glTranslated(cI->m_piPosition.m_tX,cI->m_piPosition.m_tY,0.0);
-					glScaled(0.02,0.02,0.02);
-					glBegin(GL_TRIANGLE_FAN);
+					glTranslated(cI->m_piPosition.m_tX,cI->m_piPosition.m_tY,0.0); // position in which object has been placed
+					glScaled(0.02,0.02,0.02); // circle radius = 0.02 (* height of window)
+					glBegin(GL_TRIANGLE_FAN); // draw circle
 						glVertex3d(0,0,0);
 						glVertexList(g_vEllipse);
 					glEnd();	
