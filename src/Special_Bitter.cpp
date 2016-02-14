@@ -11,11 +11,12 @@ void SPECIAL_BITTER_MAIN::init(void) // initialization routine; rendering contex
 	m_dTimer = 0.0;
 	m_bFlasher_1s_50p = true;
 
-	m_ihmMap.Set_Map_Size(PAIR<unsigned int>(128,128),3);
+	m_ihmMap.Set_Map_Size(PAIR<unsigned int>(64,64),3);
 	m_ihmMap.Set_Map_Zoom(2.0);
-	for (unsigned int uiI = 0; uiI < 16; uiI++)
+	for (unsigned int uiI = 0; uiI < 20; uiI++)
 		m_ihmMap.Shift_Zoom(1.0/1.1);
-	m_ihmMap.Center_Map(PAIR<int>(64,64));
+	m_ihmMap.Center_Map(PAIR<int>(32,32));
+//		printf("List init %i\n",m_ihmMap.Get_Map_List());
 
 //	Set_Draw_Mode(PROJECTION);
 }

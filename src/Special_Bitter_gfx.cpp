@@ -51,6 +51,7 @@ void SPECIAL_BITTER_MAIN::gfx_display(pane_id i_idPane) // primary display routi
 		glTranslated(0.0,0.0,-64.0);
 		glColor4d(0.0,0.0,0.0,1.0);
 //		m_ihmMap.Draw_Map(NULL);
+//		printf("List %i\n",m_ihmMap.Get_Map_List());
 		m_ihmMap.Draw_Grid();
 		glPopMatrix();
 
@@ -68,6 +69,11 @@ void SPECIAL_BITTER_MAIN::gfx_display(pane_id i_idPane) // primary display routi
 //			glVertex2d(dSize,0.0);
 //			glVertex2d(0.0,0.0);
 //		glEnd();
+		std::ostringstream sFrame_Rate;
+		sFrame_Rate << Get_Frame_Rate();
+		glColor4d(0.0,0.0,0.0,1.0); // black
+		glPrintJustified(0.05,0.99*dSize,0.0,0.0,sFrame_Rate.str().c_str(),HJ_RIGHT,VJ_BOTTOM);
+
 		std::ostringstream sAngle;
 		sAngle << sin(m_dTimer);
 		glColor4d(0.0,0.0,0.0,1.0); // black
