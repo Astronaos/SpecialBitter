@@ -7,23 +7,68 @@
     </Filter>
     <Filter Include="Header Files">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Source Files\SpecialBitter">
+      <UniqueIdentifier>{9536e72d-f321-43b4-9d6d-f92b87625e06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\EngineMk1">
+      <UniqueIdentifier>{3c332e9b-64d4-4af5-9ea5-95178aa00201}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\EngineMk1">
+      <UniqueIdentifier>{9e94f66c-9250-4f7d-baa4-2c2ff6c6a032}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SpecialBitter">
+      <UniqueIdentifier>{730344ec-1aee-401a-a694-5b83eb71ad40}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\SpecialBitter.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
+    <ClCompile Include="..\EngineMk1\src\core_gfx.cpp">
+      <Filter>Source Files\EngineMk1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineMk1\src\core_main.cpp">
+      <Filter>Source Files\EngineMk1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineMk1\src\core_mapspace.cpp">
+      <Filter>Source Files\EngineMk1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineMk1\src\core_pair.cpp">
+      <Filter>Source Files\EngineMk1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineMk1\src\core_quad.cpp">
+      <Filter>Source Files\EngineMk1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineMk1\src\core_triplet.cpp">
+      <Filter>Source Files\EngineMk1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineMk1\src\winmain.cpp">
+      <Filter>Source Files\EngineMk1</Filter>
+    </ClCompile>
     <ClCompile Include="src\Special_Bitter.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\SpecialBitter</Filter>
     </ClCompile>
     <ClCompile Include="src\Special_Bitter_gfx.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\SpecialBitter</Filter>
     </ClCompile>
     <ClCompile Include="src\Special_Bitter_ui.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\SpecialBitter</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\SpecialBitter.hpp">
+      <Filter>Header Files\SpecialBitter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineMk1\include\core.hpp">
+      <Filter>Header Files\EngineMk1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineMk1\include\core_hexmap.hpp">
+      <Filter>Header Files\EngineMk1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineMk1\include\core_isohexmap.hpp">
+      <Filter>Header Files\EngineMk1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineMk1\include\core_mapbase.hpp">
+      <Filter>Header Files\EngineMk1</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
