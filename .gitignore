@@ -35,6 +35,7 @@ wobj
 Debug
 *.suo
 *.sdf
+*.opensdf
 
 #Debugging
 *.log
