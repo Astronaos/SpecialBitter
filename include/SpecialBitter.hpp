@@ -22,6 +22,12 @@ public:
 	}
 };
 
+class GRAIN
+{
+public:
+	enum TYPE {UNDEF,BARLEY,WHEAT,RYE,CORN,RICE};
+	double	m_dColor_SRM;
+};
 class	SPACE : public MAPSPACE
 {
 public:
