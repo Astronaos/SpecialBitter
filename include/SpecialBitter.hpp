@@ -22,13 +22,21 @@ public:
 	}
 };
 
-class grain
+class double_uncert
 {
 public:
-	enum TYPE {UNDEF,BARLEY,WHEAT,RYE,CORN,RICE};
-	double	m_dColor_SRM;
-	
+	double	m_dValue;
+	double	m_dSigma;
+	double	Get_Rand_Value(void)
+	{
+		double	dRand = 0.0; //@@TODO generate random variate in (-\infty,\infty)
+		double dZ = dRand / m_dSigma;
+		double dSign = dRand < 0.0 ? -1.0 : 1.0;
+		return m_dValue * (1.0 + dSign *  exp(-dZ* dZ));
+	}
 };
+
+
 class wort_component_dictionary_entry
 {
 public:
@@ -41,6 +49,32 @@ class wort_component
 public:
 	double			m_dQuantity_Micrograms;
 	double			m_dDensity_Gm_CC;
+};
+class adjunct
+{
+public:
+	std::string 	m_szName;
+	std::string		m_szManufacturer;
+	double			m_dCost;
+
+	double_uncert	m_duDensity_kg_cm; // kilograms per cubic meter
+	std::map<unsigned int, wort_component> m_mSpecial_Components;
+};
+class grain : public adjunct
+{
+public:
+	enum TYPE {UNDEF,BARLEY,WHEAT,RYE,CORN,RICE,OAT};
+
+	TYPE			m_eType;
+	double_uncert	m_duColor_SRM;
+	double_uncert	m_duCaramelization_Pct;
+	double_uncert	m_duMoisture_Pct;
+	double_uncert	m_duExtract_CG_Pct;
+	double_uncert	m_duProtein_Pct;
+	double_uncert	m_duProtein_Soluble_Pct;
+	double_uncert	m_duAlpha_Amylase;
+	double_uncert	m_duDiastatic_Power_Deg_Lintner;
+
 };
 
 class wort
@@ -57,9 +91,15 @@ public:
 	std::string m_szDescription;
 	double	m_dCleaning_Efficiency;
 	double	m_dMaintenance_Cost;
-	double	m_dCleaning_Time;
+	double	m_dCleaning_Time_min;
+	double	m_dCost; // dollars
 };
 
+class pump_type : public equipment_type
+{
+public:
+	double	m_dPump_Flow_Rate_CLM; // (cubic liters per minute)
+};
 class kettle_type : public equipment_type
 {
 public:
@@ -126,10 +166,10 @@ private:
 	criticalsection	m_csEvent_Queue;
 	std::deque<button_id> m_qEvent_List;
 
-	ISOMETRIC_HEXMAP<space>	m_ihmMap;
-	std::vector<wort_component_dictionary_entry> m_mWort_Component_Dictionary;
-	std::vector<mash_tun_type> m_mMash_Tun_Dictionary;
-	std::vector<kettle_type> m_mBrew_Kettle_Dictionary;
+	ISOMETRIC_HEXMAP<space>							m_ihmMap;
+	std::vector<wort_component_dictionary_entry> 	m_mWort_Component_Dictionary;
+	std::vector<mash_tun_type> 						m_mMash_Tun_Dictionary;
+	std::vector<kettle_type> 						m_mBrew_Kettle_Dictionary;
 
 
 public:
