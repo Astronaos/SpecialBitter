@@ -1,6 +1,6 @@
 #include <SpecialBitter.hpp>
 
-void SPECIAL_BITTER_MAIN::on_key_down(KEYID eKey_ID, unsigned char chScan_Code, unsigned int uiRepeat_Count, bool bExtended_Key, bool bPrevious_Key_State)
+void special_bitter_main::on_key_down(KEYID eKey_ID, unsigned char chScan_Code, unsigned int uiRepeat_Count, bool bExtended_Key, bool bPrevious_Key_State)
 {
 	// process a key that has been pressed
 	switch (eKey_ID)
@@ -21,13 +21,13 @@ void SPECIAL_BITTER_MAIN::on_key_down(KEYID eKey_ID, unsigned char chScan_Code, 
 	}
 }
 
-void SPECIAL_BITTER_MAIN::on_key_up(KEYID eKey_ID, unsigned char chScan_Code, unsigned int uiRepeat_Count, bool bExtended_Key, bool bPrevious_Key_State)
+void special_bitter_main::on_key_up(KEYID eKey_ID, unsigned char chScan_Code, unsigned int uiRepeat_Count, bool bExtended_Key, bool bPrevious_Key_State)
 {
 }
-void SPECIAL_BITTER_MAIN::on_mouse_button_double_click(MOUSEBUTTON i_eButton, const PAIR<unsigned int> &i_tMouse_Position)
+void special_bitter_main::on_mouse_button_double_click(MOUSEBUTTON i_eButton, const PAIR<unsigned int> &i_tMouse_Position)
 {
 }
-void SPECIAL_BITTER_MAIN::on_mouse_button_down(MOUSEBUTTON i_eButton, const PAIR<unsigned int> &i_tMouse_Position)
+void special_bitter_main::on_mouse_button_down(MOUSEBUTTON i_eButton, const PAIR<unsigned int> &i_tMouse_Position)
 {
 	// process events when a mouse button is pressed.  Currently doesn't differentiate between left and right mouse click.
 	PAIR<unsigned int> tMouse = i_tMouse_Position;
@@ -64,10 +64,10 @@ void SPECIAL_BITTER_MAIN::on_mouse_button_down(MOUSEBUTTON i_eButton, const PAIR
 		m_csEvent_Queue.Unset();
 	}
 }
-void SPECIAL_BITTER_MAIN::on_mouse_button_up(MOUSEBUTTON i_eButton, const PAIR<unsigned int> &i_tMouse_Position)
+void special_bitter_main::on_mouse_button_up(MOUSEBUTTON i_eButton, const PAIR<unsigned int> &i_tMouse_Position)
 {
 }
-void SPECIAL_BITTER_MAIN::on_mousemove(const PAIR<unsigned int> &i_tMouse_Position)
+void special_bitter_main::on_mousemove(const PAIR<unsigned int> &i_tMouse_Position)
 {
 	// anytime the mouse moves, update the Mouse_position variable with the relative mouse position within a pane
 	PAIR<unsigned int> tMouse = i_tMouse_Position;
@@ -80,10 +80,10 @@ void SPECIAL_BITTER_MAIN::on_mousemove(const PAIR<unsigned int> &i_tMouse_Positi
 	m_pdMouse_Position = tMouse_Scaled;
 
 }
-void SPECIAL_BITTER_MAIN::on_mouse_wheel(MOUSEBUTTON i_eWheel, int i_iWheel_Delta, const PAIR<unsigned int> &i_tMouse_Position)
+void special_bitter_main::on_mouse_wheel(MOUSEBUTTON i_eWheel, int i_iWheel_Delta, const PAIR<unsigned int> &i_tMouse_Position)
 {
 }
-void SPECIAL_BITTER_MAIN::on_timer(unsigned int i_uiTimer_ID, const double & i_dDelta_Time_s)
+void special_bitter_main::on_timer(unsigned int i_uiTimer_ID, const double & i_dDelta_Time_s)
 {
 	// start with processing the event list
 	// begin by setting the critical section to avoid race or thrash conditions while processing the list

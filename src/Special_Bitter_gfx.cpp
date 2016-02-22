@@ -1,7 +1,7 @@
 #include <SpecialBitter.hpp>
 #include <sstream>
 
-void SPECIAL_BITTER_MAIN::gfx_init(void) // initialization routine; rendering context already created
+void special_bitter_main::gfx_init(void) // initialization routine; rendering context already created
 {
 	glClearColor(1.0,1.0,1.0,0.0);
 	glShadeModel(GL_SMOOTH);
@@ -14,7 +14,7 @@ void SPECIAL_BITTER_MAIN::gfx_init(void) // initialization routine; rendering co
 	SelectFontFace(SANS,true,false);
 }
 
-void SPECIAL_BITTER_MAIN::gfx_reshape(const PAIR<unsigned int> & i_tNew_Size) // window size change
+void special_bitter_main::gfx_reshape(const PAIR<unsigned int> & i_tNew_Size) // window size change
 {
 	// set basic projection
 	PAIR<unsigned int> m_tViewport_Size = i_tNew_Size;
@@ -28,11 +28,11 @@ void SPECIAL_BITTER_MAIN::gfx_reshape(const PAIR<unsigned int> & i_tNew_Size) //
 	// define buttons within the pane
 	m_mMain_Pane_Buttons[BLUE_CIRCLE_SELECT] = BUTTON_INFO(BUTTON_INFO::RECTANGLE, PAIR<double>(1.0,0.8), PAIR<double>(0.1,0.05), BLUE_CIRCLE_SELECT);
 }
-void SPECIAL_BITTER_MAIN::gfx_close(void) // graphics exiting; rendering context still active
+void special_bitter_main::gfx_close(void) // graphics exiting; rendering context still active
 {
 }
 
-void SPECIAL_BITTER_MAIN::gfx_display(pane_id i_idPane) // primary display routine
+void special_bitter_main::gfx_display(pane_id i_idPane) // primary display routine
 {
 	if (i_idPane == m_idPane)
 	{
@@ -164,6 +164,6 @@ void SPECIAL_BITTER_MAIN::gfx_display(pane_id i_idPane) // primary display routi
 		
 	}
 }
-void SPACE::Draw_Layer(unsigned int i_uiLayer, void * io_lpvData) const
+void space::Draw_Layer(unsigned int i_uiLayer, void * io_lpvData) const
 {
 }

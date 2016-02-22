@@ -2,9 +2,9 @@
 #include <string>
 #include <vector>
 
-SPECIAL_BITTER_MAIN	g_cSPECIAL_BITTER_Main;
+special_bitter_main	g_cSpecial_Bitter_Main;
 
-void SPECIAL_BITTER_MAIN::init(void) // initialization routine; rendering context not created
+void special_bitter_main::init(void) // initialization routine; rendering context not created
 {
 	m_idPane = Register_Pane(true);
 
@@ -20,7 +20,7 @@ void SPECIAL_BITTER_MAIN::init(void) // initialization routine; rendering contex
 
 //	Set_Draw_Mode(PROJECTION);
 }
-void SPECIAL_BITTER_MAIN::close(void) // program exiting; rendering context destroyed
+void special_bitter_main::close(void) // program exiting; rendering context destroyed
 {
 }
 

@@ -22,20 +22,95 @@ public:
 	}
 };
 
-class GRAIN
+class grain
 {
 public:
 	enum TYPE {UNDEF,BARLEY,WHEAT,RYE,CORN,RICE};
 	double	m_dColor_SRM;
+	
 };
-class	SPACE : public MAPSPACE
+class wort_component_dictionary_entry
+{
+public:
+	unsigned int m_uiType;
+	unsigned int m_uiSub_Type;
+};
+
+class wort_component
+{
+public:
+	double			m_dQuantity_Micrograms;
+	double			m_dDensity_Gm_CC;
+};
+
+class wort
+{
+public:
+	double		m_dQuantity_Kilograms;
+	std::map<unsigned int, wort_component> m_mComponents;
+};
+
+class equipment_type
+{
+public:
+	std::string m_szShort_Name;
+	std::string m_szDescription;
+	double	m_dCleaning_Efficiency;
+	double	m_dMaintenance_Cost;
+	double	m_dCleaning_Time;
+};
+
+class kettle_type : public equipment_type
+{
+public:
+	double	m_dVolume_Liters;
+	double	m_dEnergy_Efficiency;
+};
+
+class mash_tun_type : public kettle_type
+{
+public:
+	double	m_dBrewing_Efficiency;
+};
+
+
+class brew_equipment
+{
+public:
+	unsigned int m_uiType;
+	double		m_dTime_Of_Last_Major_Maintenance;
+	double		m_dTime_Of_Last_Minor_Maintenance;
+	double		m_dCleanliness;
+};
+
+class mash_tun: public brew_equipment
+{
+public:
+	// object: grain hopper
+	// object: water input
+	// object: heating
+	// object: ouput
+
+	wort		m_wWort;
+};
+
+class brew_kettle: public brew_equipment
+{
+public:
+	// object: heating
+	// object: input from mash tun
+	// object: output to chiller / fermenter
+};
+
+
+class	space : public MAPSPACE
 {
 public:
 
 	void	Draw_Layer(unsigned int i_uiLayer,void *) const;
 };
 
-class SPECIAL_BITTER_MAIN : public MAIN
+class special_bitter_main : public MAIN
 {
 private:
 	pane_id	m_idPane;
@@ -51,10 +126,14 @@ private:
 	criticalsection	m_csEvent_Queue;
 	std::deque<button_id> m_qEvent_List;
 
-	ISOMETRIC_HEXMAP<SPACE>	m_ihmMap;
+	ISOMETRIC_HEXMAP<space>	m_ihmMap;
+	std::vector<wort_component_dictionary_entry> m_mWort_Component_Dictionary;
+	std::vector<mash_tun_type> m_mMash_Tun_Dictionary;
+	std::vector<kettle_type> m_mBrew_Kettle_Dictionary;
+
 
 public:
-	SPECIAL_BITTER_MAIN(void) {;}
+	special_bitter_main(void) {;}
 private:
 	void on_key_down(KEYID eKey_ID, unsigned char chScan_Code, unsigned int uiRepeat_Count, bool bExtended_Key, bool bPrevious_Key_State);
 	void on_key_up(KEYID eKey_ID, unsigned char chScan_Code, unsigned int uiRepeat_Count, bool bExtended_Key, bool bPrevious_Key_State);
