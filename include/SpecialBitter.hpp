@@ -73,6 +73,13 @@ private:
 	std::vector<mash_tun_type> 						m_vMash_Tun_Dictionary;
 	std::vector<kettle_type> 						m_vBrew_Kettle_Dictionary;
 	std::vector<grain_storage_type>					m_vGrain_Storage_Dictionary;
+	std::vector<grain_mill_type>					m_vGrain_Mill_Dictionary;
+	std::vector<pump_type>							m_vPump_Dictionary;
+	std::vector<lauter_tun_type>					m_vLauter_Tun_Dictionary;
+	std::vector<whirlpool_type>						m_vWhirlpool_Dictionary;
+	std::vector<tank_type>							m_vTank_Dictionary;
+	std::vector<kegging_equipment_type>				m_vKegging_Equipment_Dictionary;
+	std::vector<bottling_equipment_type>			m_vBottling_Equipment_Dictionary;;
 
 
 public:

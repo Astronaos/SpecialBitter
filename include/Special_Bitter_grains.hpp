@@ -13,7 +13,7 @@ public:
 class grain : public adjunct
 {
 public:
-	enum TYPE {UNDEF,BARLEY,WHEAT,RYE,CORN,RICE,OAT};
+	enum TYPE {UNDEF,BARLEY,WHEAT,RYE,CORN,RICE,OAT,SORGHUM};
 
 	TYPE			m_eType;
 	double_uncert	m_duColor_SRM;
