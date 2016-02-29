@@ -1,0 +1,96 @@
+malt color unit
+
+#sugars
+
+maltose, fermentable sugar
+fructose, fermentable sugar
+sucrose, fermentable sugar
+dextrose, fermentable sugar
+galactose, fermentable sugar
+
+lactose, unfermentable sugar
+maltodextrin, unfermentable sugar
+
+caramelized sugar, unfermentable sugar
+
+# proteins
+
+corn protein, short protein
+corn protein, medium protein
+corn protein, long protein
+barley protein, short protein
+barley protein, medium protein
+barley protein, long protein
+wheat protein, short protein
+wheat protein, medium protein
+wheat protein, long protein
+rice protein, short protein
+rice protein, medium protein
+rice protein, long protein
+rye protein, short protein
+rye protein, medium protein
+rye protein, long protein
+oat protein, short protein
+oat protein, medium protein
+oat protein, long protein
+sorghum protein, short protein
+sorghum protein, medium protein
+sorghum protein, long protein
+
+
+#esters and phenols
+
+isoamyl acetate, ester # banana note
+ethyl acetate, ester # pear/floral/acetone note
+ethyl caproate, ester # wine-like, fruity note
+4-vinyl guaiacol, phenol # clove note
+4-ethyl phenol, phenol # barnyardy notes (some sours)
+vanillin, phenol # vanilla
+chlorophenols, phenol # created by combination of phenols and chlorinated water.  You don't want this in your beer
+
+#alcohols
+
+ethanol
+isoamyl alcohol # precursor to isoamyl acetate
+
+#acids
+
+citric acid, acid
+lactic acid, acid
+acetic acid, acid
+phosphoric acid, acid
+alpha acid, acid # hop bittering
+beta acid, acid # oxidizable acid in hops
+tetra-hop, acid # special alpha acid immune to skunking
+thiolized alpha acid, acid # skunk flavor
+
+# smokes
+
+mesquite smoke
+hickory smoke
+oak smoke
+applewood smoke
+cherrywood smoke
+walnut smoke
+maple smoke
+
+# tannins
+
+oak tannin
+hickory tannin
+mesquite tannin
+applewood tannin
+cherrywood tannin
+walnut tannin
+maple tannin
+
+# hops
+
+
+
+# flavor components
+
+capsaicin, flavor # spicy
+honey solids
+molasses solids # unfermentable component
+maple solids
