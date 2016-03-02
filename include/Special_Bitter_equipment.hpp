@@ -8,6 +8,15 @@ public:
 	double		m_dTime_Of_Last_Major_Maintenance;
 	double		m_dTime_Of_Last_Minor_Maintenance;
 	double		m_dCleanliness;
+
+	brew_equipment(void)
+	{
+		m_uiType = 0;
+		m_tpPosition =  PAIR<int>(-1,-1);
+		m_dTime_Of_Last_Major_Maintenance = 0.0;
+		m_dTime_Of_Last_Minor_Maintenance = 0.0;
+		m_dCleanliness = 1.0; 
+	}
 };
 
 class grain_storage : public brew_equipment
@@ -22,6 +31,8 @@ public:
 	// input: grain storage
 	// output: grain to mash tun
 	grain	m_grainContent;
+
+	
 };
 
 class mash_tun: public brew_equipment
@@ -42,6 +53,7 @@ public:
 	// input: wort from mash tun
 	// input: heating
 	// output: wort to chiller / fermenter
+
 };
 
 class tank: public brew_equipment
