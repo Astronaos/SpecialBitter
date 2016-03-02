@@ -1,4 +1,5 @@
-malt color unit
+#standard for color; translates directly into SRM
+malt color unit, malt color unit
 
 #sugars
 
@@ -50,8 +51,8 @@ chlorophenols, phenol # created by combination of phenols and chlorinated water.
 
 #alcohols
 
-ethanol
-isoamyl alcohol # precursor to isoamyl acetate
+ethanol, alcohol
+isoamyl alcohol, alcohol # precursor to isoamyl acetate
 
 #acids
 
@@ -59,33 +60,184 @@ citric acid, acid
 lactic acid, acid
 acetic acid, acid
 phosphoric acid, acid
-alpha acid, acid # hop bittering
+Cohumulone, acid # a type of alpha acid; sharp or harsh bitterness
+alpha acid, acid # hop bittering, soft bitterness
 beta acid, acid # oxidizable acid in hops
 tetra-hop, acid # special alpha acid immune to skunking
 thiolized alpha acid, acid # skunk flavor
 
 # smokes
 
-mesquite smoke
-hickory smoke
-oak smoke
-applewood smoke
-cherrywood smoke
-walnut smoke
-maple smoke
+mesquite smoke, smoke
+hickory smoke, smoke
+oak smoke, smoke
+applewood smoke, smoke
+cherrywood smoke, smoke
+walnut smoke, smoke
+maple smoke, smoke
 
 # tannins
 
-oak tannin
-hickory tannin
-mesquite tannin
-applewood tannin
-cherrywood tannin
-walnut tannin
-maple tannin
+oak tannin, tannin
+hickory tannin, tannin
+mesquite tannin, tannin
+applewood tannin, tannin
+cherrywood tannin, tannin
+walnut tannin, tannin
+maple tannin, tannin
 
 # hops
+# oil descriptions from http://beerlegends.com
 
+Humulene oil, essential oil # woody, herbal fragrance, woody, spicy flavor
+Myrcene oil, essential oil #grapes, peaches, vanilla, wine, balsamic, woody, green, herbaceous, and peppery fragrance, citrusy, earthy to metallic flavor
+Caryophyllene oil, essential oil # woody, peppery, spicy, earthy flavor; woody spicy earthy clove fragrance
+Farnesene oil, essential oil #herbal, woody flavor; magnolia flower, citrusy, green, woody vegetative fragrance
+Linalool oil, essential oil #sweet, flowery, spicy, woody, lavenderlike fragrance; hop flavor; 20 ppb required to get hop flavor (http://www.mbaa.com/brewresources/Documents/Linalool.pdf)
+Geraniol oil, essential oil # floral / estery
+Pinene, #piney to citrusy
+
+Amarillo oil, essential oil
+Apollo oil,
+Azacca
+Bravo
+Calypso
+Cascade
+Centennial
+Chelan
+Chinook
+Citra
+Cluster
+Columbus
+Comet
+Crystal
+El Dorado
+Eroica
+Galena
+Glacier
+Greenburg
+Horizon
+Liberty
+Millennium
+Mount Hood
+Mount Rainier
+Mosaic
+Newport
+Nugget
+Palisade
+San Juan Ruby Red
+Santiam
+Satus
+Simcoe
+Sonnet Golding
+Sterling
+Summit
+Super Galena
+Tillicum
+Ultra
+Vanguard
+Warrior
+Willamette
+Zeus
+Zythos
+#English hops
+Admiral
+Brewer's Gold
+Bramling Cross
+Bullion
+Challenger
+First Gold
+Fuggle
+Goldings
+Herald
+Northdown
+Northern Brewer
+Phoenix
+Pilgrim
+Pilot
+Pioneer
+Progress
+Target
+Whitbread Golding Variety
+
+#German
+
+Hallertauer Herkules
+Hallertauer Magnum
+Hallertauer Taurus
+Magnum
+Merkur
+Opal
+Perle
+Polaris
+Saphir
+Select
+Smaragd
+Tradition
+
+# Noble
+
+Hallertau
+Hersbrucker
+Saaz
+Tettnanger
+Spalt
+
+# Australian
+
+Ella
+Feux-Coeur Francais
+Galaxy
+Pride of Ringwood
+Summer
+Super Pride
+Topaz
+Vic Secret
+
+# New Zealand
+
+Green Bullet
+Wakatu
+Kohatu
+Motueka
+Nelson Sauvin
+New Zealand Cascade
+Pacifica
+Pacific Gem
+Pacific Jade
+Rakau
+Riwaka
+Southern Cross
+Sticklebract
+Super Alpha
+Wai-iti
+Waimea
+
+# European
+
+Aalst
+Aramis
+Bor
+Coigneau
+Junga
+Lublin
+Marynka
+Poperinge
+Premiant
+Sladek
+Strisselspalt
+Styrian Atlas
+Styrian Aurora
+Styrian Bobek
+Styrian Celeia
+Styrian Golding
+Sybilla
+Tardif de Bourgogne
+Tomyski
+
+# Japan
+
+Sorachi Ace
 
 
 # flavor components

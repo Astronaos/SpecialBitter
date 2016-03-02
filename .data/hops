@@ -1,0 +1,159 @@
+
+# hops
+# format:
+# name, source / type, year of introduction, flavor description
+# [tab] component, fraction by mass, std. dev. of fraction by mass
+# [tab] component, fraction by mass, std. dev. of fraction by mass
+# ...
+
+
+Amarillo, American, 
+	alpha acid	,	0.073625	,	0.0117120131
+	beta acid	,	0.065	,	0.005
+	Cohumulone	,	0.021375	,	0.0036635024
+	Humulene oil	,	0.0015045	,	0.000232302
+	Myrcene oil	,	0.01038105	,	0.001230532
+	Caryophyllene oil	,	0.00045135	,	0.0001595456
+	Farnesene oil	,	0.00045135	,	0.0001595456
+	Amarillo oil	,	0.00225675	,	0.0004012868
+Apollo
+Azacca
+Bravo
+Calypso
+Cascade
+Centennial
+Chelan
+Chinook
+Citra
+Cluster
+Columbus
+Comet
+Crystal
+El Dorado
+Eroica
+Galena
+Glacier
+Greenburg
+Horizon
+Liberty
+Millennium
+Mount Hood
+Mount Rainier
+Mosaic
+Newport
+Nugget
+Palisade
+San Juan Ruby Red
+Santiam
+Satus
+Simcoe
+Sonnet Golding
+Sterling
+Summit
+Super Galena
+Tillicum
+Ultra
+Vanguard
+Warrior
+Willamette
+Zeus
+Zythos
+#English hops
+Admiral
+Brewer's Gold
+Bramling Cross
+Bullion
+Challenger
+First Gold
+Fuggle
+Goldings
+Herald
+Northdown
+Northern Brewer
+Phoenix
+Pilgrim
+Pilot
+Pioneer
+Progress
+Target
+Whitbread Golding Variety
+
+#German
+
+Hallertauer Herkules
+Hallertauer Magnum
+Hallertauer Taurus
+Magnum
+Merkur
+Opal
+Perle
+Polaris
+Saphir
+Select
+Smaragd
+Tradition
+
+# Noble
+
+Hallertau
+Hersbrucker
+Saaz
+Tettnanger
+Spalt
+
+# Australian
+
+Ella
+Feux-Coeur Francais
+Galaxy
+Pride of Ringwood
+Summer
+Super Pride
+Topaz
+Vic Secret
+
+# New Zealand
+
+Green Bullet
+Wakatu
+Kohatu
+Motueka
+Nelson Sauvin
+New Zealand Cascade
+Pacifica
+Pacific Gem
+Pacific Jade
+Rakau
+Riwaka
+Southern Cross
+Sticklebract
+Super Alpha
+Wai-iti
+Waimea
+
+# European
+
+Aalst
+Aramis
+Bor
+Coigneau
+Junga
+Lublin
+Marynka
+Poperinge
+Premiant
+Sladek
+Strisselspalt
+Styrian Atlas
+Styrian Aurora
+Styrian Bobek
+Styrian Celeia
+Styrian Golding
+Sybilla
+Tardif de Bourgogne
+Tomyski
+
+# Japan
+
+Sorachi Ace
+
