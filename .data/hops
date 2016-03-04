@@ -1,38 +1,173 @@
 
 # hops
 # format:
-# name, source / type, year of introduction, flavor description
+# name, source / type, year of introduction, type (aroma,bittering,dual), flavor description
 # [tab] component, fraction by mass, std. dev. of fraction by mass
 # [tab] component, fraction by mass, std. dev. of fraction by mass
 # ...
 
 
-Amarillo, American, 
-	alpha acid	,	0.073625	,	0.0117120131
-	beta acid	,	0.065	,	0.005
-	Cohumulone	,	0.021375	,	0.0036635024
-	Humulene oil	,	0.0015045	,	0.000232302
-	Myrcene oil	,	0.01038105	,	0.001230532
-	Caryophyllene oil	,	0.00045135	,	0.0001595456
-	Farnesene oil	,	0.00045135	,	0.0001595456
-	Amarillo oil	,	0.00225675	,	0.0004012868
+Amarillo, American,  2004, aroma, # http://ychhops.com/varieties/summit, 3 Mar 2016
+	alpha acid	,	0.0702	,	0.0157035028
+	beta acid	,	0.0675	,	0.0125
+	Cohumulone	,	0.0198	,	0.0047539457
+	b-Pinene oil	,	9.491625E-05	,	4.33345109655688E-05
+	Myrcene oil	,	0.000087615	,	0.000045213
+	Linalool oil	,	0.006571125	,	0.0026896211
+	Caryophyllene oil	,	0.0012412125	,	0.0005357814
+	Farnesene oil	,	0.0010951875	,	0.0004838551
+	Humulene oil	,	0.0031395375	,	0.0012895402
+	Geraniol oil	,	1.46025E-05	,	1.56947208481069E-05
+	type oil	,	0.0023583038	,	0.0012755189
 Apollo
 Azacca
 Bravo
 Calypso
-Cascade
-Centennial
+Cascade, American, 1971, aroma,  # http://ychhops.com/varieties/cascade, 3 Mar 2016
+	alpha acid	,	0.0489375	,	0.0119507453
+	beta acid	,	0.0675	,	0.0075
+	Cohumulone	,	0.0235625	,	0.0059693226
+	b-Pinene oil	,	6.571125E-05	,	4.03197394662342E-05
+	Myrcene oil	,	9.491625E-05	,	5.35781441272932E-05
+	Linalool oil	,	0.0076663125	,	0.0040983539
+	Caryophyllene oil	,	0.001022175	,	0.0006021415
+	Farnesene oil	,	0.0010951875	,	0.0006052148
+	Humulene oil	,	0.002482425	,	0.0013517778
+	Geraniol oil	,	0.000029205	,	2.09662832006534E-05
+	Cascade oil	,	0.0021465675	,	0.0016578899
+Centennial, American, 1990, dual, # http://ychhops.com/varieties/centennial, 3 Mar 2016
+	alpha acid	,	0.07125	,	0.0188460208
+	beta acid	,	0.045	,	0.01
+	Cohumulone	,	0.02375	,	0.0065324192
+	b-Pinene oil	,	0.00013275	,	7.14880628147105E-05
+	Myrcene oil	,	0.0001593	,	0.000081593
+	Linalool oil	,	0.01062	,	0.0053832448
+	Caryophyllene oil	,	0.001062	,	0.0005597231
+	Farnesene oil	,	0.0000885	,	0.000098946
+	Humulene oil	,	0.002655	,	0.0015954564
+	Geraniol oil	,	0.0002655	,	0.0001429761
+	Centennial oil	,	0.00271695	,	0.001858737
 Chelan
-Chinook
-Citra
-Cluster
-Columbus
-Comet
-Crystal
-El Dorado
-Eroica
-Galena
-Glacier
+Chinook, American, 1985, dual, # http://ychhops.com/varieties/chinook, 3 Mar 2016
+	alpha acid	,	0.094075	,	0.012704453
+	beta acid	,	0.035	,	0.005
+	Cohumulone	,	0.038425	,	0.0057252183
+	b-Pinene oil	,	0.00006195	,	0.000030737
+	Myrcene oil	,	0.00006195	,	0.000030737
+	Linalool oil	,	0.003871875	,	0.0018311696
+	Caryophyllene oil	,	0.00154875	,	0.0006815793
+	Farnesene oil	,	7.74375E-05	,	8.42494899836195E-05
+	Humulene oil	,	0.003252375	,	0.0014692733
+	Geraniol oil	,	0.0001316438	,	6.10144763816342E-05
+	Chinook oil	,	0.0064815188	,	0.0029262046
+Citra, American, 2007, dual, # http://ychhops.com/varieties/citra, 3 Mar 2016
+	alpha acid	,	0.1014	,	0.0158151826
+	beta acid	,	0.0375	,	0.0075
+	Cohumulone	,	0.0286	,	0.0051107729
+	b-Pinene oil	,	0.0001493438	,	5.80544148030535E-05
+	Myrcene oil	,	0.0001692563	,	6.38374308546718E-05
+	Linalool oil	,	0.012943125	,	0.0044277648
+	Caryophyllene oil	,	0.0012943125	,	0.0005247404
+	Farnesene oil	,	9.95625E-05	,	0.0001049481
+	Humulene oil	,	0.0018916875	,	0.0008033843
+	Geraniol oil	,	0.00007965	,	3.31875E-05
+	Citra oil	,	0.0032855625	,	0.0015936843
+Cluster, American, 1800, dual, # http://ychhops.com/varieties/cluster, 3 Mar 2016
+	alpha acid	,	0.046125	,	0.0094136205
+	beta acid	,	0.05	,	0.01
+	Cohumulone	,	0.028875	,	0.0060717584
+	b-Pinene oil	,	0.000039825	,	1.87736850405028E-05
+	Myrcene oil	,	0.000039825	,	1.48419012006549E-05
+	Linalool oil	,	0.00278775	,	0.0009664346
+	Caryophyllene oil	,	0.000597375	,	0.0002098962
+	Farnesene oil	,	3.31875E-05	,	3.49826966156127E-05
+	Humulene oil	,	0.0011615625	,	0.0004212474
+	Geraniol oil	,	4.978125E-05	,	1.93514716010178E-05
+	Cluster oil	,	0.0019281938	,	0.0007189961
+Columbia, American, 1967, aroma, # http://ychhops.com/varieties/columbia, 3 Mar 2016
+	alpha acid	,	0.033	,	0.00305
+	beta acid	,	0.035	,	0.005
+	Cohumulone	,	0.022	,	0.0020742469
+	b-Pinene oil	,	4.64625E-05	,	2.52263812803184E-05
+	Myrcene oil	,	0.000092925	,	3.36997959934478E-05
+	Linalool oil	,	0.0066375	,	0.0023099178
+	Caryophyllene oil	,	0.001393875	,	0.0005054969
+	Farnesene oil	,	0.000531	,	0.00022125
+	Humulene oil	,	0.00225675	,	0.0007977282
+	Geraniol oil	,	0.00002655	,	1.59545643939282E-05
+	Columbia oil	,	0.0022899375	,	0.0010731834
+Columbus, American, 1980, aroma, # http://ychhops.com/varieties/columbus, 3 Mar 2016
+	alpha acid	,	0.1136	,	0.0107695172
+	beta acid	,	0.0525	,	0.0075
+	Cohumulone	,	0.0464	,	0.0046349218
+	b-Pinene oil	,	0.000154875	,	0.000054014
+	Myrcene oil	,	0.0002478	,	9.40767904427016E-05
+	Linalool oil	,	0.0154875	,	0.0046882034
+	Caryophyllene oil	,	0.002478	,	0.0009407679
+	Farnesene oil	,	0.000154875	,	0.0001610724
+	Humulene oil	,	0.003562125	,	0.0012788556
+	Geraniol oil	,	0.0001084125	,	0.000055841
+	Columbus oil	,	0.0087814125	,	0.0031157601
+Comet, American, 1974, aroma, # http://ychhops.com/varieties/comet, 3 Mar 2016
+	alpha acid	,	0.0596625	,	0.0081810184
+	beta acid	,	0.045	,	0.005
+	Cohumulone	,	0.0328375	,	0.0046493615
+	b-Pinene oil	,	0.00009204	,	3.13144966429288E-05
+	Myrcene oil	,	0.00013452	,	3.97758029460123E-05
+	Linalool oil	,	0.006726	,	0.0019887901
+	Caryophyllene oil	,	0.00177	,	0.0005666765
+	Farnesene oil	,	0.0000708	,	0.000072979
+	Humulene oil	,	0.0002124	,	0.0000885
+	Geraniol oil	,	0.00007788	,	5.32472957059793E-05
+	Comet oil	,	0.00507636	,	0.0016962114
+Crystal, American, 1983, aroma, # http://ychhops.com/varieties/comet, 3 Mar 2016
+	alpha acid	,	0.033975	,	0.0113450981
+	beta acid	,	0.0725	,	0.0125
+	Cohumulone	,	0.011025	,	0.0037364756
+	b-Pinene oil	,	0.00010974	,	5.97686307773568E-05
+	Myrcene oil	,	9.60225E-05	,	6.20668362533487E-05
+	Linalool oil	,	0.0058299375	,	0.0033011879
+	Caryophyllene oil	,	0.0011659875	,	0.0007408209
+	Farnesene oil	,	6.85875E-05	,	7.61948509579223E-05
+	Humulene oil	,	0.003429375	,	0.0017955361
+	Geraniol oil	,	7.544625E-05	,	4.19057078823995E-05
+	Crystal oil	,	0.0029424038	,	0.002382374
+Fuggle, American, 1900, aroma,  # http://ychhops.com/varieties/fuggle, 3 Mar 2016
+	alpha acid	,	0.032175	,	0.01084003
+	beta acid	,	0.0275	,	0.0075
+	Cohumulone	,	0.012825	,	0.0045559028
+	b-Pinene oil	,	0.0000531	,	0.000022125
+	Myrcene oil	,	2.323125E-05	,	1.26131906401592E-05
+	Linalool oil	,	0.0013275	,	0.000553125
+	Caryophyllene oil	,	0.000862875	,	0.0003167818
+	Farnesene oil	,	0.0004314375	,	0.0001749135
+	Humulene oil	,	0.002323125	,	0.0008424949
+	Geraniol oil	,	6.6375E-06	,	6.99653932312254E-06
+	Fuggle oil	,	0.0016095938	,	0.0007321219
+Galena, American, 1978, bittering,  # http://ychhops.com/varieties/galena, 3 Mar 2016
+	alpha acid	,	0.0889	,	0.0072506896
+	beta acid	,	0.08	,	0.005
+	Cohumulone	,	0.0511	,	0.0050569259
+	b-Pinene oil	,	0.00003009	,	1.66276403918295E-05
+	Myrcene oil	,	8.27475E-05	,	2.98055859907166E-05
+	Linalool oil	,	0.00677025	,	0.0017616836
+	Caryophyllene oil	,	0.00105315	,	0.0003898021
+	Farnesene oil	,	0.000075225	,	7.72793026948354E-05
+	Humulene oil	,	0.0021063	,	0.0006703254
+	Geraniol oil	,	9.77925E-05	,	3.22296781902954E-05
+	Galena oil	,	0.004829445	,	0.0014691188
+Glacier, American, 2000, dual,  # http://ychhops.com/varieties/glacier, 3 Mar 2016
+	alpha acid	,	0.0491625	,	0.0149873384
+	beta acid	,	0.085	,	0.015
+	Cohumulone	,	0.0083375	,	0.002680077
+	b-Pinene oil	,	7.56675E-05	,	1.4609203007009E-05
+	Myrcene oil	,	0.00003186	,	1.63185936894084E-05
+	Linalool oil	,	0.003186	,	0.0005328406
+	Caryophyllene oil	,	0.000836325	,	0.0002197403
+	Farnesene oil	,	0.000039825	,	4.00700792362581E-05
+	Humulene oil	,	0.0023895	,	0.0004786369
+	Geraniol oil	,	1.99125E-05	,	4.55581633738675E-06
+	Glacier oil	,	0.00138591	,	0.000618521
 Greenburg
 Horizon
 Liberty
@@ -49,7 +184,18 @@ Satus
 Simcoe
 Sonnet Golding
 Sterling
-Summit
+Summit, US, 2000, bittering # http://ychhops.com/varieties/summit, 3 Mar 2016
+	alpha acid	,	0.1112	,	0.0073527206
+	beta acid	,	0.0575	,	0.0075
+	Cohumulone	,	0.0488	,	0.0038810437
+	Humulene oil	,	0.0039825	,	0.0013859507
+	Myrcene oil	,	0.006969375	,	0.0025274847
+	Caryophyllene oil	,	0.00278775	,	0.0010109939
+	Farnesene oil	,	9.95625E-05	,	0.0001049481
+	b-Pinene oil	,	8.960625E-05	,	4.22407913411314E-05
+	Linallol oil	,	5.97375E-05	,	2.81605275607543E-05
+	Geraniol oil	,	6.969375E-05	,	5.4935087404363E-05
+	Summit oil	,	0.005854275	,	0.0022649976
 Super Galena
 Tillicum
 Ultra
@@ -58,15 +204,97 @@ Warrior
 Willamette
 Zeus
 Zythos
+
 #English hops
-Admiral
+
+Admiral, UK, 1998, bitter,  # http://ychhops.com/varieties/summit, 3 Mar 2016
+	alpha acid	,	0.08555	,	0.0105812334
+	beta acid	,	0.05	,	0.01
+	Cohumulone	,	0.05945	,	0.0084535496
+	b-Pinene oil	,	0	,	0
+	Myrcene oil	,	0	,	0
+	Linalool oil	,	0.0051971625	,	0.0014507152
+	Caryophyllene oil	,	0.000836325	,	0.0002475628
+	Farnesene oil	,	0.000119475	,	0.000123425
+	Humulene oil	,	0.0029271375	,	0.0007797611
+	Geraniol oil	,	0	,	0
+	Admiral oil	,	0.0028674	,	0.0009499281
+
 Brewer's Gold
 Bramling Cross
 Bullion
-Challenger
-First Gold
-Fuggle
-Goldings
+Challenger, UK, 1968, dual,   # http://ychhops.com/varieties/summit, 3 Mar 2016
+	alpha acid	,	0.0585125	,	0.0083535359
+	beta acid	,	0.0425	,	0.0025
+	Cohumulone	,	0.0169875	,	0.0030239151
+	b-Pinene oil	,	0	,	0
+	Myrcene oil	,	0	,	0
+	Linalool oil	,	0.0043011	,	0.0013256402
+	Caryophyllene oil	,	0.001075275	,	0.0003032982
+	Farnesene oil	,	0.00023895	,	0.0001345811
+	Humulene oil	,	0.0034050375	,	0.0009768181
+	Geraniol oil	,	0	,	0
+	Challenger oil	,	0.0029271375	,	0.0011371863
+First Gold, UK, 1995, dual,  # http://ychhops.com/varieties/first-gold, 3 Mar 2016
+	alpha acid	,	0.049915	,	0.0124173689
+	beta acid	,	0.032	,	0.009
+	Cohumulone	,	0.024585	,	0.0061502886
+	b-Pinene oil	,	0	,	0
+	Myrcene oil	,	0	,	0
+	Linalool oil	,	0.002482425	,	0.0009144346
+	Caryophyllene oil	,	0.000632775	,	0.000235192
+	Farnesene oil	,	0.00029205	,	0.0001440676
+	Humulene oil	,	0.0021417	,	0.0008027687
+	Geraniol oil	,	0	,	0
+	First Gold oil	,	0.00418605	,	0.0015453707
+Fuggle, UK, 1875, aroma,  # http://ychhops.com/varieties/fuggle-1, 3 Mar 2016
+	alpha acid	,	0.031175	,	0.0094861083
+	beta acid	,	0.025	,	0.005
+	Cohumulone	,	0.011825	,	0.0037331287
+	b-Pinene oil	,	0.00007434	,	0.000030975
+	Myrcene oil	,	3.252375E-05	,	1.76584668962229E-05
+	Linalool oil	,	0.00241605	,	0.0008265161
+	Caryophyllene oil	,	0.001022175	,	0.0003881156
+	Farnesene oil	,	0.00055755	,	0.0002077866
+	Humulene oil	,	0.0032988375	,	0.0011238847
+	Geraniol oil	,	9.2925E-06	,	9.79515505237156E-06
+	Fuggle oil	,	0.0018817313	,	0.000725083
+East Kent Golding, UK, 1800, dual,  # http://ychhops.com/varieties/east-kent-golding, 3 Mar 2016
+	alpha acid	,	0.0385	,	0.0070859015
+	beta acid	,	0.0235	,	0.0045
+	Cohumulone	,	0.0165	,	0.0031953091
+	b-Pinene oil	,	0	,	0
+	Myrcene oil	,	0	,	0
+	Linalool oil	,	0.001593	,	0.0005336484
+	Caryophyllene oil	,	0.0007434	,	0.0002695984
+	Farnesene oil	,	0.00002655	,	2.79861572924902E-05
+	Humulene oil	,	0.0021771	,	0.0007429785
+	Geraniol oil	,	0	,	0
+	Goldings oil	,	0.00076995	,	0.0003256511
+Goldings, UK, 1790, dual,  # http://ychhops.com/varieties/golding, 3 Mar 2016
+	alpha acid	,	0.0349125	,	0.0128822189
+	beta acid	,	0.0275	,	0.0075
+	Cohumulone	,	0.0125875	,	0.0046919146
+	b-Pinene oil	,	4.64625E-05	,	0.000021974
+	Myrcene oil	,	0.00002478	,	1.22948129306631E-05
+	Linalool oil	,	0.0018585	,	0.0008546095
+	Caryophyllene oil	,	0.000774375	,	0.0003662339
+	Farnesene oil	,	0.000030975	,	3.36997959934478E-05
+	Humulene oil	,	0.002478	,	0.00110625
+	Geraniol oil	,	0.000006195	,	0.00000674
+	Goldings oil	,	0.0009757125	,	0.0006259863
+Goldings, Slovenia, 1800, dual,  # http://ychhops.com/varieties/golding-1, 3 Mar 2016
+	alpha acid	,	0.0305025	,	0.0099420075
+	beta acid	,	0.025	,	0.005
+	Cohumulone	,	0.0109975	,	0.0036312549
+	b-Pinene oil	,	4.314375E-05	,	0.000024782
+	Myrcene oil	,	0.00002301	,	1.36602839007833E-05
+	Linalool oil	,	0.00172575	,	0.000945139
+	Caryophyllene oil	,	0.00057525	,	0.0003150463
+	Farnesene oil	,	0.0002013375	,	0.0001385597
+	Humulene oil	,	0.0020709	,	0.0011210194
+	Geraniol oil	,	5.7525E-06	,	6.53343420415328E-06
+	Goldings oil	,	0.0011073563	,	0.0006398831
 Herald
 Northdown
 Northern Brewer
@@ -97,13 +325,35 @@ Tradition
 
 Hallertau
 Hersbrucker
-Saaz
+Saaz, Czech Republic, 1500, aroma,    # http://ychhops.com/varieties/czech-saaz, 3 Mar 2016
+	alpha acid	,	0.026425	,	0.0075682313
+	beta acid	,	0.05	,	0.01
+	Cohumulone	,	0.008575	,	0.0025056187
+	b-Pinene oil	,	0.00002655	,	1.03207848538762E-05
+	Myrcene oil	,	0.00003186	,	1.50189480324023E-05
+	Linalool oil	,	0.0017523	,	0.0006923393
+	Caryophyllene oil	,	0.00039825	,	0.0001548118
+	Farnesene oil	,	0.0009027	,	0.0003404663
+	Humulene oil	,	0.00119475	,	0.0005632106
+	Geraniol oil	,	0.0000531	,	5.59723145849803E-05
+	Saaz oil	,	0.00095049	,	0.000657135
 Tettnanger
 Spalt
 
 # Australian
 
-Ella
+Ella, Australia, 2007, dual,     # http://ychhops.com/varieties/ella, 3 Mar 2016
+	alpha acid	,	0.09472	,	0.0100459743
+	beta acid	,	0.063	,	0.015
+	Cohumulone	,	0.05328	,	0.0061580516
+	b-Pinene oil	,	0	,	0
+	Myrcene oil	,	0	,	0
+	Linalool oil	,	0.01154925	,	0.0023689253
+	Caryophyllene oil	,	0.00384975	,	0.0010165565
+	Farnesene oil	,	0.000128325	,	0.0001302184
+	Humulene oil	,	0.00487635	,	0.0011400367
+	Geraniol oil	,	0	,	0
+	Ella oil	,	0.005261325	,	0.0019161732
 Feux-Coeur Francais
 Galaxy
 Pride of Ringwood
@@ -114,7 +364,18 @@ Vic Secret
 
 # New Zealand
 
-Green Bullet
+Green Bullet, New Zealand, 2007, dual,     # http://ychhops.com/varieties/ella, 3 Mar 2016
+	alpha acid	,	0.076875	,	0.0092461478
+	beta acid	,	0.0675	,	0.0025
+	Cohumulone	,	0.048125	,	0.0058087219
+	b-Pinene oil	,	0	,	0
+	Myrcene oil	,	0	,	0
+	Linalool oil	,	0.0036993	,	0.0003501067
+	Caryophyllene oil	,	0.00089562	,	8.19999184450814E-05
+	Farnesene oil	,	0.000048675	,	4.88757225010536E-05
+	Humulene oil	,	0.00274527	,	0.0002497598
+	Geraniol oil	,	0	,	0
+	Green Bullet oil	,	0.002346135	,	0.0002398464
 Wakatu
 Kohatu
 Motueka
