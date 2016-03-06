@@ -40,3 +40,4 @@ Debug
 #Debugging
 *.log
 
+ignore/SpecialBitter.hpp
