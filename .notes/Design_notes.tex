@@ -1,0 +1,64 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}	% Advanced maths commands
+\usepackage{amssymb}	% Extra maths symbols
+
+\title{Sim Brewer (working title) development notes}
+\author{Brian W. Mulligan \and Chris Lindner}
+% These dates will be filled out by the publisher
+\date{\today}
+\newcommand{\BE}{\begin{equation}}
+\newcommand{\EE}{\end{equation}}
+
+
+\begin{document}
+\maketitle
+
+Rate of change of protein content during mashing
+\BE dX_L = \left(- \epsilon_L X_L e^{-\left(\frac{(T - T_{L,opt})}{\sigma_{T,L}}\right)^2} + \sigma_L G_L\right) dt \EE
+\BE dX_M = \left(\epsilon_L X_L e^{-\left(\frac{(T - T_{L,opt})}{\sigma_{T,L}}\right)^2} - \epsilon_M X_M e^{-\left(\frac{(T - T_{M,opt})}{\sigma_{T,M}}\right)^2} + \sigma_M G_M\right)dt \EE
+\BE dX_S = \left(\epsilon_M X_M e^{-\left(\frac{(T - T_{M,opt})}{\sigma_{T,M}}\right)^2} + \sigma_S G_S\right)dt \EE
+\begin{table}[H]
+\caption{Protein Conversion Glossary}
+\begin{center}\begin{tabular}{|c|l|}
+\hline
+$X_L$ & long protein quantity\\
+$\epsilon_L$ & long protein enzymatic efficiency\\
+$T$ & Temperature\\
+$T_{L,opt}$ & optimum temperature for long protein enzymatic breakdown\\
+$\sigma_{T,L}$ & long protein enzyme temperature tolerance\\
+$\sigma_L$ & long protein soluability rate\\
+$G_L$ & long protein content in grain\\
+$t$ & time\\
+$X_M$ & medium protein quantity\\
+$\epsilon_M$ & medium protein enzymatic efficiency\\
+$T_{M,opt}$ & optimum temperature for medium protein enzymatic breakdown\\
+$\sigma_{T,M}$ & medium protein enzyme temperature tolerance\\
+$\sigma_M$ & medium protein soluability rate\\
+$G_M$ & medium protein content in grain\\
+$X_S$ & small protein quantity\\
+$\epsilon_S$ & small protein enzymatic efficiency\\
+$T_{S,opt}$ & optimum temperature for small protein enzymatic breakdown\\
+$\sigma_{T,S}$ & small protein enzyme temperature tolerance\\
+$\sigma_S$ & small protein soluability rate\\
+$G_S$ & small protein content in grain\\
+\hline
+\end{tabular}\end{center}\end{table}
+
+Rate of change of sugar content during mashing
+\BE dX_m = \left(\epsilon_m G_m e^{-\left(\frac{(T - T_{m,opt})}{\sigma_{T,m}}\right)^2}\right) dt \EE
+\begin{table}[H]
+\caption{Protein Conversion Glossary}
+\begin{center}\begin{tabular}{|c|l|}
+\hline
+$X_m$ & maltose quantity\\
+$\epsilon_m$ & maltose enzymatic efficiency\\
+$T$ & Temperature\\
+$T_{m,opt}$ & optimum temperature for enzymatic breakdown of starch into maltose\\
+$\sigma_{T,m}$ & maltose enzyme temperature tolerance\\
+$G_m$ & maltose content in grain\\
+$t$ & time\\
+\hline
+\end{tabular}\end{center}\end{table}
+
+\end{document}
